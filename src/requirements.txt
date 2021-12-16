@@ -1,0 +1,2 @@
+python-json-logger==2.0.2
+opensearch-logger==1.2.0
