@@ -10,6 +10,11 @@ services:
       - ./:/app:rw,cached
     networks:
       - opensearch-net
+    environment:
+        AWS_ACCESS_KEY_ID: ${AWS_ACCESS_KEY_ID}
+        AWS_SECRET_ACCESS_KEY: ${AWS_SECRET_ACCESS_KEY}
+        AWS_DEFAULT_REGION: ${AWS_DEFAULT_REGION}
+
   opensearch:
     image: opensearchproject/opensearch:latest
     container_name: opensearch

@@ -14,7 +14,9 @@ RUN apt-get update && apt-get install filebeat
 
 RUN service filebeat start
 
-RUN pip3 install --upgrade pip
+RUN pip3 install --upgrade pip awscli --upgrade --user --no-warn-script-location
+
+RUN cp /root/.local/bin/aws /usr/bin/aws && chmod -R a+w /usr/bin/aws
 
 WORKDIR /app
 
