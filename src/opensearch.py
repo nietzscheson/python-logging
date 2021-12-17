@@ -5,7 +5,7 @@ import time
 from opensearch_logger import OpenSearchHandler
 
 handler = OpenSearchHandler(
-    index_name="my-logs",
+    index_name="opensearch",
     hosts=["https://opensearch:9200"],
     http_auth=("admin", "admin"),
     http_compress=True,

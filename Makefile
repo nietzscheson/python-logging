@@ -14,3 +14,7 @@ logs:
 	docker-compose logs
 tox:
 	docker-compose run --rm py tox
+ps:
+	docker-compose ps
+ingest.opensearch:
+	docker-compose run --rm py python src/opensearch.py
